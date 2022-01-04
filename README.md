@@ -1,1 +1,1 @@
-# Nomad_VanilaJS_Chrome-app
+# Nomad_VanillaJS_Chrome-app
