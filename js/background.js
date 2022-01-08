@@ -1,9 +1,10 @@
 const images = ["0.png", "1.jfif", "2.jfif", "3.jfif", "4.png"];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+const radImg = images[Math.floor(Math.random()*images.length)];
 
-const bgImage = document.createElement("img");
+const thisImg = document.createElement("img");
+thisImg.id = "back1"
 
-bgImage.src = `images/${chosenImage}`;
+thisImg.src = `images/${radImg}`;
 
-document.body.appendChild(bgImage);
+document.body.appendChild(thisImg);

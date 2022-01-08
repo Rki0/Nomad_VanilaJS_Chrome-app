@@ -1,4 +1,6 @@
-const quotes = [
+const quotes = document.querySelector("#quotes");
+
+const quotesList = [
   {
     quote: "Without continuous personal development, you are now all that you will ever become and hell starts when the person you are meets the person you could have been.",
     author: "-Eli cohen-"
@@ -39,12 +41,12 @@ const quotes = [
     quote: "Be poor, humble and driven. Don't be afraid to shift or pivot.",
     author: "-Alex Rodriguez-"
   },
-]
+];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = quotes.querySelector("span:first-child");
+const author = quotes.querySelector("span:last-child");
 
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
+const whom = quotesList[Math.floor(Math.random()* quotesList.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = whom.quote;
+author.innerText = whom.author;
