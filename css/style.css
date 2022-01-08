@@ -1,113 +1,147 @@
-.hidden {
-  display: none;
-}
-
 body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/*시계 부분*/
+/*clock*/
 #clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: bold;
   font-size: 8em;
-  margin: 0;
-  margin-top: 5%;
-}
-
-/*이름 입력 전 로그인 정보 input 부분*/
-#login-form {
-  /* 이렇게하면, hidden은 class이므로 id에서의 설정이 먼저 적용되어 display 속성이 바뀌지않음. 
   display: flex;
   justify-content: center;
   align-items: center;
-  */
-  text-align: center;
+  margin: 0;
+  margin-top: 50px;
 }
 
-#login-form input {
+/*before login*/
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form input {
+  width: 245px;
   border: none;
+  border-bottom: solid black;
+  background-color: transparent;
 }
 
-#login-form button {
-  border: none;
-  color: white;
-  background: skyblue;
+.login-form input::placeholder {
+  color: black;
 }
 
-input:focus {
+.login-form input:focus {
   outline: none;
 }
 
-/*이름 입력 후 로그인 정보 input 부분*/
-#greeting {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  margin: 0;
-}
-
-/*투두리스트 입력 부분*/
-#todo-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1%;
-}
-
-#todo-form input {
-  width: 180px;
-  border: none;
+.loginBtn {
+  border: 2px solid black;
+  color: black;
+  margin-left: 10px;
   background-color: transparent;
+  border-bottom-right-radius: 5px;
 }
 
-/*투두리스트 리스트 나열 부분*/
-#todo-list {
-  padding-left: 0;
+.loginBtn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
 }
-#todo-list li {
-  list-style-type: none;
-  text-align: center;
-  margin: 2px;
+
+/*after login*/
+.logIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
   font-weight: bold;
 }
 
-#todo-list li button {
-  border: none;
-  margin-left: 5px;
-  margin-top: 0px;
+/*input To-Do-List*/
+#todoInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#todoInput input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: solid black;
+  width: 165px;
   background-color: transparent;
 }
 
-/*명언 부분*/
-#quote {
+#todoInput input::placeholder {
+  color: black;
+}
+
+#todoInput input:focus {
+  outline: none;
+}
+
+/*list of To-Do-List*/
+#todoList {
+  padding: 0;
+  list-style-type: decimal;
+}
+
+#todoList li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+#todoList span {
+  margin-right: 10px;
+}
+
+#todoList button {
+  all: unset;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: tomato;
+}
+
+#todoList button:hover {
+  cursor: pointer;
+}
+
+/*quotes*/
+#quotes {
   position: absolute;
   width: 100%;
-  bottom: 5px;
-  left: 0;
   text-align: center;
+  bottom: 5px;
   font-style: italic;
 }
 
-/*날씨, 위치 부분*/
+/*weather*/
 #weather {
   position: absolute;
-  right: 5px;
   top: 0;
-  font-weight: bold;
+  right: 0;
 }
 
-/*배경 화면 부분*/
-img {
+/*background*/
+#back1 {
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background: center no-repeat;
+  top: 0;
+  left: 0;
   z-index: -1;
+}
+
+/*for hidden some tag*/
+.hidden {
+  display: none;
 }

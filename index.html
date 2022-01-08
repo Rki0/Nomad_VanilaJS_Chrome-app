@@ -4,33 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momentum</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>To-Do-List!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
 <body>
-  <h2 id="clock">00:00:00</h2>
-  <form id="login-form" class="hidden">
-    <input required maxlength="15" type="text" placeholder="What is your name?">
-    <button>Log In</button>
+  <!--clock-->
+  <h1 id="clock">00:00:00</h1>
+  <!--login-->
+  <form class="login-form hidden">
+    <input type="text" maxlength="20" required autofocus placeholder="Please Write Your Name and Press Enter">
+    <button class="loginBtn">Log In</button>
   </form>
-  <h1 id="greeting" class="hidden"></h1>
-  <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter" required>
+  <div class="logIn hidden"></div>
+  <!--To-Do-List-->
+  <form id="todoInput">
+    <input type="text" required placeholder="Write What You Have To Do">
   </form>
-  <ul id="todo-list"></ul>
-  <div id="quote">
+  <ul id="todoList"></ul>
+  <!--quotes-->
+  <div id="quotes">
     <span></span><br>
     <span></span>
   </div>
+  <!--weather-->
   <div id="weather">
-    <span></span>&deg;C
-    <span></span>
+    <div class="first">
+      <i class="fas fa-temperature-high"></i>
+      <span id="temp"></span>&deg;C<br>
+    </div>
+    <div class="second">
+      <i class="far fa-compass"></i>
+      <span id="location"></span>
+    </div>
   </div>
-  <script src="js/greetings.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/quotes.js"></script>
-  <script src="js/background.js"></script>
-  <script src="js/todo.js"></script>
-  <script src="js/weather.js"></script>
+  <script src="clock.js"></script>
+  <script src="login.js"></script>
+  <script src="todo.js"></script>
+  <script src="quotes.js"></script>
+  <script src="weather.js"></script>
+  <script src="background.js"></script>
 </body>
 </html>
