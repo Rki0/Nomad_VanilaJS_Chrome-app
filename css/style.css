@@ -4,15 +4,26 @@ body {
   height: 100%;
 }
 
+/*date*/
+#date {
+  font-weight: bold;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
 /*clock*/
 #clock {
+  height: 110px;
   font-weight: bold;
   font-size: 8em;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 /*before login*/
@@ -101,6 +112,23 @@ body {
 
 #todoList span {
   margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::after {
+  background-image: url("../images/check.png");
 }
 
 #todoList button {
